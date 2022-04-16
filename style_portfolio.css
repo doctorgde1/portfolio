@@ -1,0 +1,190 @@
+body,html
+{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(20, 17, 17);
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+hr
+{
+    position: relative;
+    top: 3px;
+    left: -5%;
+    width: 0px;
+    visibility: hidden;
+    background-color: #f4ebeb;
+    height: 2.5px;
+    border-radius: 40%;
+    transition: 0.2s ease-in;
+    border: none;
+}
+.content-header__portfolio hr
+{
+    left: 0%;
+}
+
+.content
+{
+    background-color: rgba(0, 0, 0, 0.748);
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1350px;
+    margin: 0 auto;
+}
+.content-header
+{
+}
+.content-header__navigation
+{}
+.content-header__column
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content-header__row1
+{
+    margin: 35px 0 35px 0px;
+}
+.content-header__row2
+{
+    padding-left: 25px;
+    padding-bottom: 35px;
+}
+.content-header__image img
+{
+    position: relative;
+    max-width: 50%;
+    left:50%;
+    transform: translatex(-50%);
+}
+
+.content-header__contact
+{
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 22px;
+    color: hsl(0, 30%, 94%);
+}
+.content-header__name
+{
+    font-size: 24px;
+}
+.content-header__surname
+{
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.content-header__links a
+{
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 5px;
+    line-height: 2px;
+    color:hsl(0, 30%, 94%);
+}
+.content-header__main{}
+.content-header__portfolio
+{
+}
+.content-header__main:hover hr
+{
+    visibility: visible;
+    width: 45px;
+}
+
+.content-header__portfolio:hover hr
+{
+    visibility: visible;
+    width: 100px;
+}
+.content-header__main, .content-header__portfolio
+{
+    padding-right: 40px;
+    position: relative;
+}
+
+.content-header__main span::after
+{
+    content: '~';
+    position: absolute;
+    left: 75px;
+
+}
+
+.content-header__portfolio span::after
+{
+    content: '';
+    position: absolute;
+    background-image: url('images/icons/down_arow.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 10px;
+    top: -4px;
+    left: 135px;
+    transition: 0.2s ease-out;
+}
+
+.content-header__portfolio:hover span::after
+{
+    transform: rotateX(180deg) rotateY(180deg);
+}
+
+
+
+
+
+.content-main{}
+
+
+.content-main__images
+{
+    margin: 0 15px;
+    margin-bottom: 35px;
+}
+
+
+
+
+.content-header__images-item
+{
+}
+
+.content-main__images-item img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+
+
+
+.content-footer
+{
+    height: 120px;
+}
+.content-footer__links
+{
+    text-align: center;
+}
+.content-footer__instagram
+{
+    font-size: 35px;
+    color: hsl(0, 29%, 94%);
+}
+.content-footer__description
+{
+    color: hsl(0, 29%, 94%);
+    font-size: 15px;
+}
