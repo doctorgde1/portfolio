@@ -25,6 +25,10 @@ $(document).ready(function () {
         else {
             Orientation = "horizontal";
         }
-        background_slider[nextSlide].querySelector('img').setAttribute('src', `images/${Orientation}/background_${nextSlide}.jpg`);
+        background_slider[0].querySelector('img').setAttribute('src', `images/${Orientation}/background_${0}.jpg`);
+        background_slider[1].querySelector('img').setAttribute('src', `images/${Orientation}/background_${1}.jpg`);
+        background_slider[2].querySelector('img').setAttribute('src', `images/${Orientation}/background_${2}.jpg`);
+        background_slider[3].querySelector('img').setAttribute('src', `images/${Orientation}/background_${3}.jpg`);
+        background_slider[4].querySelector('img').setAttribute('src', `images/${Orientation}/background_${4}.jpg`);
     });
 });
