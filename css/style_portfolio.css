@@ -18,22 +18,67 @@ button {
 }
 
 
+
 hr {
-    position: relative;
-    top: 3px;
-    left: -5%;
-    width: 0px;
     visibility: hidden;
-    background-color: #f4ebeb;
-    height: 2.5px;
-    border-radius: 40%;
-    transition: 0.2s ease-in;
-    border: none;
 }
 
-.content-header__portfolio hr {
-    left: 0%;
+@media (min-width: 900px) {
+    hr {
+        position: relative;
+        top: 3px;
+        left: -5%;
+        width: 0px;
+        background-color: #f4ebeb;
+        height: 2.5px;
+        border-radius: 40%;
+        transition: 0.2s ease-in;
+        border: none;
+    }
+
+    .content-header__portfolio {
+        padding-right: 40px;
+        position: relative;
+    }
+
+    .content-header__portfolio hr {
+        left: 0%;
+    }
+
+    .content-header__portfolio span::after {
+        content: '';
+        position: absolute;
+        background-image: url('../images/icons/down_arow.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 10px;
+        height: 10px;
+        top: -4px;
+        left: 135px;
+        transition: 0.2s ease-out;
+    }
+
+    .content-header__portfolio:hover span::after {
+        transform: rotateX(180deg) rotateY(180deg);
+    }
+
+    .content-header__main:hover hr {
+        visibility: visible;
+        width: 45px;
+    }
+
+    .content-header__portfolio:hover hr {
+        visibility: visible;
+        width: 100px;
+    }
+
 }
+
+
+
+
+
+
 
 .content {
     background-color: rgba(13, 14, 15, 0.748);
@@ -102,18 +147,7 @@ hr {
 
 .content-header__portfolio {}
 
-.content-header__main:hover hr {
-    visibility: visible;
-    width: 45px;
-}
-
-.content-header__portfolio:hover hr {
-    visibility: visible;
-    width: 100px;
-}
-
-.content-header__main,
-.content-header__portfolio {
+.content-header__main {
     padding-right: 40px;
     position: relative;
 }
@@ -125,38 +159,10 @@ hr {
 
 }
 
-.content-header__portfolio span::after {
-    content: '';
-    position: absolute;
-    background-image: url('../images/icons/down_arow.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 10px;
-    height: 10px;
-    top: -4px;
-    left: 135px;
-    transition: 0.2s ease-out;
-}
-
-.content-header__portfolio:hover span::after {
-    transform: rotateX(180deg) rotateY(180deg);
-}
 
 
 
-
-/* .content-main__images {
-    margin: 0 15px;
-    margin-bottom: 35px;
-}
-
-.content-main__images-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 5px;
-} */
-
+/* Фотки */
 .content-main {
     width: 100%;
 
@@ -175,36 +181,53 @@ hr {
 
 }
 
+@media (min-width: 320px) {
+    .slick-list .slick-slide {
+        visibility: hidden;
+        opacity: 0;
+        transform: scale(0%);
+    }
+
+    .slick-list .slick-active {
+        visibility: visible;
+        opacity: 0.3;
+        transform: scale(80%);
+        z-index: -10;
+    }
+
+    .slick-list .slick-current {
+        visibility: visible;
+        opacity: 1;
+        transform: scale(100%);
+        z-index: 1;
+    }
+
+    .content-main__wrapper {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 1000px) {
+    .content-main__wrapper {
+        transform: translateX(3%);
+    }
+}
+
 .content-main__wrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     padding: 0px 10px 0px 0px;
-
 }
+
+
 
 .slider__item {
     text-align: center;
     transition: all 0.5s linear;
 }
 
-.slick-slide {
-    visibility: hidden;
-    opacity: 0;
-}
 
-.slick-list .slick-active {
-    visibility: visible;
-    opacity: 0.3;
-    transform: scale(70%);
-    z-index: -10;
-}
-
-.slick-list .slick-current {
-    opacity: 1;
-    transform: scale(100%);
-    z-index: 1;
-}
 
 .content-main-slider {
     position: relative;
@@ -261,26 +284,7 @@ hr {
     }
 }
 
-/* @media (max-width: 1150px) {
-    .content-main__wrapper {
-        max-width: 1250px;
-    }
 
-    .content-main__wrapper img {
-        max-width: 900px;
-    }
-}
-
-@media (max-width: 925px) {
-    .content-main__wrapper {
-        width: 1000px;
-    }
-
-    .content-main__wrapper img {
-        max-width: 700px;
-        scale: both;
-    }
-} */
 
 
 
@@ -292,12 +296,22 @@ hr {
     text-align: center;
 }
 
-.content-footer__instagram {
-    font-size: 35px;
+.link {
+    font-size: 30px;
     color: hsl(0, 29%, 94%);
+    padding-right: 20px;
+}
+
+.link:last-child {
+    padding: 0;
+}
+
+.link:hover {
+    opacity: 80%;
 }
 
 .content-footer__description {
+    text-align: center;
     color: hsl(0, 29%, 94%);
     font-size: 15px;
 }
