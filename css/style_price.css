@@ -1,0 +1,403 @@
+body,
+html {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(20, 17, 17);
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+button {
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+}
+
+* {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: hsl(0, 29%, 94%);
+}
+
+
+@media (min-width: 900px) {
+    .content-header__links .link-button:hover {
+        opacity: 0.8;
+    }
+
+    .content-header__links .link-button:hover::after {
+        opacity: 100%;
+        animation: rotate 1s infinite linear forwards;
+    }
+
+    .price-card__cursor
+    {
+        background: url("../images/icons/star.svg") 0 0 / 100% no-repeat;
+        position:absolute;
+        width: 20px;
+        height: 20px;
+        z-index: 999;
+        pointer-events: none;
+        display: none;
+        animation: rotate-w-x 2s infinite linear forwards;
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: translateY(-50%) rotate(0deg);
+        }
+
+        100% {
+            transform: translateY(-50%) rotate(360deg);
+        }
+
+        30% {
+            transform: translateY(-20%) rotate(108deg);
+        }
+
+        80% {
+            transform: translateY(-70%) rotate(288deg);
+        }
+    }
+    @keyframes rotate-w-x {
+        0% {
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
+
+        100% {
+            transform: translate(-50%, -50%) rotate(360deg);
+        }
+
+        30% {
+            transform: translate(-50%, -20%) rotate(108deg);
+        }
+
+        80% {
+            transform: translate(-50%, -70%) rotate(288deg);
+        }
+    }
+}
+
+
+
+
+.content {
+    background-color: rgba(13, 14, 15, 0.748);
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1350px;
+    margin: 0 auto;
+}
+
+.content-header {}
+
+.content-header__navigation {}
+
+.content-header__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-header__row1 {
+    margin: 35px 0 35px 0px;
+}
+
+.content-header__row2 {
+    padding-bottom: 35px;
+}
+
+.content-header__image img {
+    position: relative;
+    max-width: 50%;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+.content-header__contact {
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 22px;
+}
+
+.content-header__name {
+    font-size: 24px;
+}
+
+.content-header__surname {
+    font-weight: 900;
+    font-size: 30px;
+}
+
+
+
+/*Ссылки*/
+.content-header__links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-header__links a,
+.content-header__links::after {
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 5px;
+}
+
+.content-header__links .link-button {
+    margin: 0px 40px 5px 0px;
+}
+
+.link-button {
+    position: relative;
+    transition: all 1s linear;
+}
+
+
+.content-header__links .link-button::after {
+    content: '';
+    background: url("../images/icons/star.svg") 0 0 / 100% no-repeat;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    right: -21px;
+    transform: translateY(-50%);
+}
+
+
+
+.content-header__main {}
+
+.content-header__portfolio {}
+
+.content-header__price {}
+
+
+
+
+
+
+
+.content-main {
+    width: 100%;
+    position: relative;
+    margin: 20px 0px 50px 0px;
+}
+
+
+
+
+.content-main__cards
+{
+    overflow: hidden;
+}
+
+.price-card {
+    position: relative;
+    max-width: 60%;
+    margin: 40px auto;
+    margin-bottom: 100px;
+    padding: 10px;
+    z-index: 1;
+    animation: photo_appear 3s ease forwards;
+    text-shadow: 2px 2px 4px black;
+}
+
+.price-card:last-child {
+    margin-bottom: 0px;
+}
+
+@keyframes photo_appear
+{
+    0%
+    {
+        visibility: hidden;
+        opacity: 0;
+    }
+    100%
+    {
+        visibility: visible;
+        opacity: 1;
+    }   
+}
+
+.price-card::after {
+    content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto magnam ducimus tempore quaerat delectus facilis eum animi quis sed";
+    position: absolute;
+    z-index: -1;
+    color: transparent;
+    -webkit-text-stroke: 1px hsl(0, 29%, 94%);
+    font-weight: 700;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    font-size: calc(24px + 36 * (100vw / 1350));
+    letter-spacing: 5px;
+    position: absolute;
+    line-height: calc(25px + 50 * (100vw / 1350));
+    top: -5%;
+    right: -2%;
+    opacity: 0.2;
+    word-break: break-all;
+}
+
+
+
+.price-card__header {
+    font-weight: 700;
+    text-transform: uppercase;
+    writing-mode: sideways-lr;
+    font-size: calc(22px + 27 * (100vw / 1350));
+    letter-spacing: 7px;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    transform: translate(-100%, 0);
+    z-index: 100;
+    text-align: center;
+}
+
+.price-card__img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.price-card__img img {
+    width: 100%;
+    height: 100%;
+    animation: border-r 2s ease-out forwards;
+}
+
+@keyframes border-r
+{
+    0%
+    {
+        border-bottom-right-radius: 0;
+
+    }
+    100%
+    {
+        border-bottom-right-radius: 40%;
+    }
+}
+
+
+
+.price-card__included {
+    font-weight: 700;
+    padding-left: 40px;
+    margin: 0;
+}
+
+.price-card__description {
+    padding-top: 30px;
+    font-size: calc(14px + 4 * (100vw / 1350));
+}
+
+.price-card__list-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-card__included li {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.price-card__included li:last-child {
+    padding-bottom: 0px;
+}
+
+.price-card__price {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: calc(24px + 31 * (100vw / 1350));
+    font-weight: 700;
+    text-shadow: 1px 1px 4px rgb(7, 25, 57);
+    transform: translateY(40%);
+}
+.price-card__included li::before {
+    content: '';
+    background: url("../images/icons/star.svg") 0 0 / 100% no-repeat;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -20px;
+}
+
+.price-card__not-included {
+    
+    font-size: calc(16px + 8 * (100vw / 1350));
+}
+@media (max-width: 767px)
+{
+
+    .price-card__included {
+        padding-left: 20px;
+    }
+    .price-card::after {
+        font-size: calc(24px + (36 + 36 * 0.7) * ((100vw - 320px) / 1350));
+        line-height: calc(25px + (50 + 50 * 0.7) * ((100vw -320px) / 1350));
+    }
+        
+    .price-card__header, .price-card__price {
+        font-size: calc(21px + (27 + 27 * 0.7) * ((100vw - 320px) / 1350));
+    }
+
+    .price-card__description {
+        font-size: calc(14px + (4 + 4 * 0.7) * ((100vw - 320px) / 1350));
+    }
+    .price-card__not-included {
+        font-size: calc(16px + (8 + 8 * 0.7) * ((100vw - 320) / 1350));
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.content-footer {
+    height: 120px;
+}
+
+.content-footer__links {
+    text-align: center;
+}
+
+.link {
+    font-size: 30px;
+    padding-right: 20px;
+}
+
+.link:last-child {
+    padding: 0;
+}
+
+.link:hover {
+    opacity: 80%;
+}
+
+.content-footer__description {
+    text-align: center;
+    font-size: 15px;
+}

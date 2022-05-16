@@ -6,53 +6,19 @@ html {
     font-family: 'M PLUS Rounded 1c', sans-serif;
     overflow: hidden;
 }
-
-hr {
-    visibility: hidden;
+button {
+    padding: 0;
+    border: 0;
+    cursor: pointer;
 }
-@media (min-width: 900px) {
-    hr {
-        top: 9px;
-        left: 5%;
-        width: 0px;
-        background-color: hsl(0, 29%, 94%);
-        height: 2.5px;
-        border-radius: 40%;
-        transition: 0.2s ease-in;
-        border: none;
-    }
 
-    .content-header__portfolio {
-        padding-right: 40px;
-        position: relative;
-    }
-
-    .content-header__portfolio span::after {
-        content: '';
-        position: absolute;
-        background: url('../images/icons/down_arow.png') 0 0 / 100% no-repeat;
-        z-index: 1100;
-        width: 10px;
-        height: 10px;
-        top: -4px;
-        left: 130px;
-        transition: 0.2s ease-out;
-    }
-
-    .content-header__portfolio:hover span::after {
-        transform: rotateX(180deg) rotateY(180deg);
-    }
-
-    .content-header__main:hover hr {
-        visibility: visible;
-        width: 35px;
-    }
-
-    .content-header__portfolio:hover hr {
-        visibility: visible;
-        width: 80px;
-    }
-
+* {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: hsl(0, 29%, 94%);
 }
 
 .wrapper {
@@ -142,52 +108,60 @@ hr {
 }
 
 .content-header__column2 {
-    padding-right: 20px;
 }
 
-
+/*Ссылки*/
 .content-header__links {
-    max-width: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
-@media (max-width: 470px) {
-    .content-header__links {
-        max-width: min-content;
-    }
-}
-
-.content-header__links a {
-    display: inline-block;
-    text-decoration: none;
+.content-header__links a,
+.content-header__links::after {
     font-weight: 500;
-    font-size: 18px;
-    line-height: 2px;
-    letter-spacing: 2px;
-    color: hsl(0, 30%, 94%);
+    font-size: 16px;
+    letter-spacing: 5px;
 }
 
+.content-header__links .link-button {
+    margin: 0px 40px 5px 0px;
+}
 
-
-
-.content-header__main {
-    padding-right: 40px;
+.link-button {
     position: relative;
+    transition: all 1s linear;
 }
 
-.content-header__main span::after {
-    content: '★';
+
+.content-header__links .link-button::after {
+    content: '';
+    background: url("../images/icons/star.svg") 0 0 / 100% no-repeat;
     position: absolute;
-    left: 65px;
-
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    right: -21px;
+    transform: translateY(-50%);
 }
 
 
 
-@media (max-width: 350px) {
-    .content-header__portfolio span::after {
-        display: none;
-    }
-}
+.content-header__main {}
+
+.content-header__portfolio {}
+
+.content-header__price {}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -213,4 +187,34 @@ hr {
 
 .link:hover {
     opacity: 80%;
+}
+
+
+@media (min-width: 900px) {
+    .content-header__links .link-button:hover {
+        opacity: 0.8;
+    }
+
+    .content-header__links .link-button:hover::after {
+        opacity: 100%;
+        animation: rotate 1s infinite linear forwards;
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: translateY(-50%) rotate(0deg);
+        }
+
+        100% {
+            transform: translateY(-50%) rotate(360deg);
+        }
+
+        30% {
+            transform: translateY(-20%) rotate(108deg);
+        }
+
+        80% {
+            transform: translateY(-70%) rotate(288deg);
+        }
+    }
 }
