@@ -273,18 +273,17 @@ button {
         flex-direction: column;
         margin-top: 40px;
     }
-    
+
     .burger * {
         display: var(--display);
     }
-    
+
     .burger .link-button {
         margin: 0;
         margin: 20px;
     }
 
-    .burger__ico
-    {
+    .burger__ico {
         display: flex;
         flex-grow: unset;
         flex-shrink: unset;
@@ -298,82 +297,79 @@ button {
         width: 30px;
         height: 25px;
     }
-    .burger__ico-item
-    {
+
+    .burger__ico-item {
         display: block;
         height: 0px;
+        width: 100%;
         border: 2px solid hsl(0, 29%, 94%);
     }
-    .burger__ico-item:nth-child(1)
-    {
+
+    .burger__ico-item:nth-child(1) {
         animation: var(--animation1) 0.4s linear forwards;
-        animation-direction: var(--reverse);
     }
-    .burger__ico-item:nth-child(2)
-    {
+
+    .burger__ico-item:nth-child(2) {
         animation: var(--animation2) 0.4s linear forwards;
-        animation-direction: var(--reverse);
     }
-    .burger__ico-item:nth-child(3)
-    {
+
+    .burger__ico-item:nth-child(3) {
         animation: var(--animation3) 0.4s linear forwards;
-        animation-direction: var(--reverse);
     }
+
     @keyframes cross-1 {
-        0%{
-            
-        }
-        100%
-        {
-            transform:translateY(340%) rotate(45deg);
+        0% {}
+
+        100% {
+            transform: translateY(340%) rotate(45deg);
         }
     }
+
     @keyframes cross-2 {
-        0%{
-            
-        }
-        100%
-        {
+        0% {}
+
+        100% {
             transform: translateY(-340%) rotate(-45deg);
         }
     }
+
     @keyframes disapear {
-        0%{
-            
-        }
-        100%
-        {
+        0% {}
+
+        100% {
             visibility: hidden;
             opacity: 0;
             transform: translateX(-325%);
         }
     }
+
     @keyframes cross-1-reverse {
-        0%{
+        0% {
             transform: translateY(340%) rotate(45deg);
         }
-        100%
-        {
-            transform:translateY(680%) rotate(0deg); 
+
+        100% {
+            transform: translateY(680%) rotate(0deg);
         }
     }
+
     @keyframes cross-2-reverse {
-        0%{
+        0% {
             transform: translateY(-340%) rotate(-45deg);
         }
-        100%
-        {
+
+        100% {
             transform: translateY(-680%) rotate(0deg);
         }
     }
+
     @keyframes disapear-reverse {
-        0%{
-                visibility: hidden;
-                opacity: 0;
-                transform: translateX(325%);
+        0% {
+            visibility: hidden;
+            opacity: 0;
+            transform: translateX(325%);
         }
-        100%
-        {
-        }
+
+        100% {}
     }
 }
