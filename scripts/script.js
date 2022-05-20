@@ -42,3 +42,47 @@ $(document).ready(function () {
         }
     });
 });
+
+
+
+
+const burger = document.querySelector(".burger");
+
+
+const ul = document.createElement('ul');
+const li1 = document.createElement('li');
+const li2 = document.createElement('li');
+const li3 = document.createElement('li');
+
+ul.classList = "burger__ico";
+li1.classList = "burger__ico-item";
+li2.classList = "burger__ico-item";
+li3.classList = "burger__ico-item";
+
+ul.append(li1);
+ul.append(li2);
+ul.append(li3);
+burger.prepend(ul);
+
+
+burger.style.setProperty("--display", "none");
+
+ul.addEventListener("click", () => {
+    if (burger.style.getPropertyValue("--display") === "none") {
+        burger.style.setProperty("--animation1", "cross-1");
+        burger.style.setProperty("--animation2", "disapear");
+        burger.style.setProperty("--animation3", "cross-2");
+
+        burger.style.setProperty("--width", "100%");
+        burger.style.setProperty("--bgc", "hsla(0, 0%, 0%, 0.8)");
+        burger.style.setProperty("--display", "block");
+    }
+    else {
+        burger.style.setProperty("--animation1", "cross-1-reverse");
+        burger.style.setProperty("--animation2", "disapear-reverse");
+        burger.style.setProperty("--animation3", "cross-2-reverse");
+        burger.style.setProperty("--width", "0%");
+        burger.style.setProperty("--bgc", "transparent");
+        burger.style.setProperty("--display", "none");
+    }
+});

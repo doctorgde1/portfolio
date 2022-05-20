@@ -83,7 +83,7 @@ button {
 }
 
 .content-header__row2 {
-    padding-bottom: 35px;
+    padding-left: 40px;
 }
 
 .content-header__image img {
@@ -163,7 +163,7 @@ button {
 .content-main {
     width: 100%;
     position: relative;
-    margin: 20px 0px 50px 0px;
+    margin: 70px 0px 50px 0px;
 }
 
 
@@ -340,4 +340,28 @@ button {
 .content-footer__description {
     text-align: center;
     font-size: 15px;
+}
+
+.active::before
+{
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 2px;
+    background-color: #fff;
+    animation: active 1s linear forwards;
+}
+
+@keyframes active
+{
+    0%
+    {
+        width: 0;
+        transform:scaleX(-100%);
+    }
+    100%
+    {
+        width: calc(100% - 5px);
+    }
 }
