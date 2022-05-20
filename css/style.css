@@ -286,6 +286,8 @@ button {
     .burger__ico
     {
         display: flex;
+        flex-grow: unset;
+        flex-shrink: unset;
         flex-direction: column;
         justify-content: space-between;
         top: 0;
