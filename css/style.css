@@ -66,7 +66,7 @@ button {
 }
 
 .content-header {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 
@@ -178,8 +178,8 @@ button {
 
 .content-footer {
     position: relative;
-    margin: 0px 15px 30px 0px;
-    text-align: right;
+    margin: 0px 0px 20px 20px;
+    text-align: left;
 }
 
 .content-footer__links {}
@@ -249,8 +249,6 @@ button {
         width: calc(100% - 5px);
     }
 }
-
-
 
 
 
