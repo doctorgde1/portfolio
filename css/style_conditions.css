@@ -195,7 +195,7 @@ button {
     min-height: 100%;
     grid-template-rows: fit-content(1fr) fit-content(1fr);
     grid-template-columns: fit-content(1fr) fit-content(1fr);
-    grid-template-areas: "list-1 list-2""warning warning";
+    grid-template-areas: "list-1 list-2""params params""warning warning";
 }
 
 
@@ -255,8 +255,11 @@ button {
     grid-area: list-2;
     background-color: hsl(0, 0%, 10%);
 }
-
 .content-main__condition-block-3 {
+    grid-area: params;
+    background-color: hsl(0, 0%, 15%);
+}
+.content-main__condition-block-4 {
     grid-area: warning;
     background-color: hsl(0, 29%, 94%);
 }
@@ -285,9 +288,9 @@ button {
 
 @media (max-width: 767px) {
     .content-main__conditions-grid {
-        grid-template-rows: fit-content(1fr) fit-content(1fr) fit-content(1fr);
+        grid-template-rows: fit-content(1fr) fit-content(1fr) fit-content(1fr) fit-content(1fr);
         grid-template-columns: 1fr;
-        grid-template-areas: "list-1""list-2""warning";
+        grid-template-areas: "list-1""list-2""params""warning";
     }
     .condition-block {
         padding: 25px 5px;
