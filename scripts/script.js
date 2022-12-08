@@ -20,27 +20,27 @@ $(document).ready(function () {
         fade: true,
         easing: "linear",
     });
-    $('.background-slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-        if (window.innerHeight > window.innerWidth) {
-            Orientation = "vertical";
-        }
-        else {
-            Orientation = "horizontal";
-        }
-        if (Orientation != memory) {
-            background_slider.forEach(element => {
-                if (element != currentSlide) {
-                    element.querySelector('img').setAttribute('src', `images/${Orientation}/background_${i}.jpg`);
-                    i++;
-                }
-                else {
-                    i++;
-                }
-            });
-            i = 0;
-            memory = Orientation;
-        }
-    });
+//    $('.background-slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+//        if (window.innerHeight > window.innerWidth) {
+//            Orientation = "vertical";
+//        }
+//        else {
+//            Orientation = "horizontal";
+//        }
+//        if (Orientation != memory) {
+//            background_slider.forEach(element => {
+//                if (element != currentSlide) {
+//                    element.querySelector('img').setAttribute('src', `images/${Orientation}/background_${i}.jpg`);
+//                    i++;
+//                }
+//                else {
+//                    i++;
+//                }
+//            });
+//            i = 0;
+//            memory = Orientation;
+//        }
+//    });
 });
 
 

@@ -7,6 +7,7 @@ html {
 }
 
 button {
+    background-color: transparent;
     padding: 0;
     border: 0;
     cursor: pointer;
@@ -202,8 +203,9 @@ button {
 .price-card {
     position: relative;
     max-width: 60%;
-    margin: 40px auto;
-    margin-bottom: 100px;
+    margin: 0 auto;
+    margin-bottom: 250px;
+    margin-top: 60px;
     padding: 10px;
     z-index: 1;
     animation: photo_appear 3s ease forwards;
@@ -232,13 +234,13 @@ button {
     z-index: -1;
     color: transparent;
     -webkit-text-stroke: 1px hsl(0, 29%, 94%);
+    font-size: 60px;
+    line-height: 75px;
     font-weight: 700;
     text-transform: uppercase;
     writing-mode: vertical-rl;
-    font-size: calc(24px + 36 * (100vw / 1350));
     letter-spacing: 5px;
     position: absolute;
-    line-height: calc(25px + 50 * (100vw / 1350));
     top: -5%;
     right: -2%;
     opacity: 0.2;
@@ -250,7 +252,7 @@ button {
 .price-card__header {
     font-weight: 700;
     text-transform: uppercase;
-    font-size: calc(22px + 27 * (100vw / 1350));
+    font-size: 63px;
     letter-spacing: 7px;
     writing-mode:vertical-rl;
     transform: rotate(180deg) translateX(100%);
@@ -262,12 +264,16 @@ button {
 }
 
 .price-card__img {
-    width: 100%;
-    height: 100%;
     position: relative;
+    width: 100%;
+    height: 500px;
 }
 
 .price-card__img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
     width: 100%;
     height: 100%;
     animation: border-r 2s ease-out forwards;
@@ -278,7 +284,6 @@ button {
         border-bottom-right-radius: 0;
 
     }
-
     100% {
         border-bottom-right-radius: 40%;
     }
@@ -286,79 +291,54 @@ button {
 
 
 
-.price-card__included {
-    font-weight: 700;
-    padding-left: 40px;
-    margin-bottom: 20px;
-}
 
-.price-card__description {
-    padding-top: 30px;
-    font-size: calc(14px + 4 * (100vw / 1350));
-}
 
-.price-card__list-wrap {
-    display: flex;
-    justify-content: space-between;
-}
 
-.price-card__included li {
-    position: relative;
-    padding-bottom: 5px;
+.price-card__filter {
+    font-size: 16px;
+    top: 0;
+    right: -25px;
 }
-
-.price-card__included li:last-child {
-    padding-bottom: 0px;
+.price-card__filter-output {
+    font-size: 24px;
 }
-
-.price-card__price {
+.price-card__filter-output > .output__price {
     position: absolute;
-    bottom: 0;
+    top: 410px;
     right: 0;
-    font-size: calc(24px + 31 * (100vw / 1350));
-    font-weight: 700;
-    text-shadow: 1px 1px 4px rgb(7, 25, 57);
-    transform: translateY(40%);
+    font-weight: bold;
+    font-size: 70px;
 }
 
-.price-card__included li::before {
-    content: '';
-    background: url("../images/icons/star.svg") 0 0 / 100% no-repeat;
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    left: -20px;
+.price-card__filter-output > .output__services {
+    padding: 15px 0 0 15px;
 }
 
-.price-card__not-included {
 
-    font-size: calc(16px + 8 * (100vw / 1350));
-}
-
-@media (max-width: 767px) {
-
-    .price-card__included {
-        padding-left: 20px;
+@media (max-width: 1350px) {
+    .price-card__filter-output {
+        font-size: calc(10px + 14 * ((100vw - 320px) / (1350 - 320)));
     }
-
+    .price-card__filter-output > .output__price {
+        top: calc(80px + 330 * ((100vw - 320px) / (1350 - 320)));
+        font-size: calc(24px + 46 * ((100vw - 320px) / (1350 - 320)));
+    }
+    .price-card__filter {
+        font-size: calc(9px + 7 * ((100vw - 320px) / (1350 - 320)));
+    }
+    .price-card__img {
+        height: calc(100px + 400 * ((100vw - 320px) / (1350 - 320)));
+    }
+    .price-card {
+        margin-bottom: calc(60px + 190 * ((100vw - 320px) / (1350 - 320)));
+    }
     .price-card::after {
-        font-size: calc(24px + (36 + 36 * 0.7) * ((100vw - 320px) / 1350));
-        line-height: calc(25px + (50 + 50 * 0.7) * ((100vw -320px) / 1350));
+        font-size: calc(24px + 36 * ((100vw - 320px) / (1350 - 320)));
+        line-height: calc(25px + 50 * ((100vw - 320px) / (1350 - 320)));
     }
 
-    .price-card__header,
-    .price-card__price {
-        font-size: calc(21px + (27 + 27 * 0.7) * ((100vw - 320px) / 1350));
-    }
-
-    .price-card__description {
-        font-size: calc(14px + (4 + 4 * 0.7) * ((100vw - 320px) / 1350));
-    }
-
-    .price-card__not-included {
-        font-size: calc(16px + (8 + 8 * 0.7) * ((100vw - 320) / 1350));
+    .price-card__header {
+        font-size: calc(15px + 48 * ((100vw - 320px) / (1350 - 320)));
     }
 }
 

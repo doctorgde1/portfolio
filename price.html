@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style_price.css">
+    <link rel="stylesheet" type="" href="css/filter.css">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
@@ -59,91 +60,217 @@
         <div class="content-main">
             <main>
                 <div class="content-main__cards">
-                    <div class="content-main__price-card-1 price-card">
+                    <div class="content-main__price-card-1 price-card" id="1">
                         <span class="price-card__header">
-                            Студійна зйомка
+                            Індивідуальна студійна
                         </span>
+                        <div class="price-card__filter filter js-filter">
+                            <div class="filter__close-button">  
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
+                           <div class="filter__city filter__row">
+                               <div class="filter__item filter__active">
+                                   <button type="" value="lutsk">Луцьк</button>
+                               </div>
+                              <div class="filter__item">
+                                   <button type="" value="rivne">Рівне</button>
+                               </div>
+                               <div class="filter__item">
+                                   <button type="" value="lviv">Лвів</button>
+                               </div> 
+                           </div> 
+                            <div class="filter__package filter__row">
+                                <div class="filter__item">
+                                   <button type="" value="mini">Mini</button>
+                               </div>
+                                 <div class="filter__item filter__active">
+                                   <button type="" value="maxi">Maxi</button>
+                               </div>
+                           </div> 
+                            <div class="filter__time filter__row filter__time--two">
+                                  <div class="filter__item filter__active">
+                                   <button type="" value="1">1 год</button>
+                                  </div>
+                                    <div class="filter__item">
+                                   <button type="" value="2">2 год</button>
+                               </div>
+                           </div>
+                        </div>
                         <a target="_blank" href="https://t.me/anasteya_n" class="price-card__link">
                             <div class="price-card__img">
-                                <img src="images/price/price-studio.jpg" alt="">
-                                <span class="price-card__price">
-                                    600 грн
-                                </span>
+                                <picture>
+                                    <source type="image/webp" media="(min-width: 320px)" srcset="images/price/price-studio.webp">
+                                    <img src="images/price/price-studio.jpg" alt="">
+                                </picture>
                             </div>
-                            <div class="price-card__description">
-                                <ul class="price-card__included">
-                                    <li>Підбір ідеї, локації, образа</li>
-                                    <li>Зйомка 55 хвилин</li>
-                                    <li>Від 80 гарних фото</li>
-                                </ul>
-                                <div class="price-card__not-included">
-                                    <p>Фотостудія, візажист, парекмахер, аренда одягу та інш. сплачуються окремо</p>
+                            <div class="price-card__filter-output output js-output">
+                                <div class="output__price">
+                                </div>
+                                <div class="output__services">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="content-main__price-card-2 price-card" id="2">
+                        <span class="price-card__header">
+                            Індивідуальна вулична
+                        </span>
+                        <div class="price-card__filter filter js-filter">
+                            <div class="filter__close-button">  
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
+                           <div class="filter__city filter__row">
+                               <div class="filter__item filter__active">
+                                   <button type="" value="lutsk">Луцьк</button>
+                               </div>
+                              <div class="filter__item">
+                                   <button type="" value="rivne">Рівне</button>
+                               </div>
+                               <div class="filter__item">
+                                   <button type="" value="lviv">Лвів</button>
+                               </div> 
+                           </div> 
+                            <div class="filter__package filter__row">
+                                <div class="filter__item">
+                                   <button type="" value="mini">Mini</button>
+                               </div>
+                                 <div class="filter__item filter__active">
+                                   <button type="" value="maxi">Maxi</button>
+                               </div>
+                           </div> 
+                            <div class="filter__time filter__row">
+                                  <div class="filter__item filter__active">
+                                   <button type="" value="1.5">1.5 год</button>
+                                  </div>
+                                  <div class="filter__item">
+                                   <button type="" value="2">2 год</button>
+                                  </div>
+                                    <div class="filter__item">
+                                   <button type="" value="3">3 год</button>
+                               </div>
+                           </div>
+                        </div>
+                        <a target="_blank" href="https://t.me/anasteya_n" class="price-card__link">
+                            <div class="price-card__img">
+                                <picture>
+                                    <source type="image/webp" media="(min-width: 320px)" srcset="images/price/price-street.webp">
+                                    <img src="images/price/price-street.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="price-card__filter-output output js-output">
+                                <div class="output__price">
+                                </div>
+                                <div class="output__services">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="content-main__price-card-3 price-card" id="3">
+                        <span class="price-card__header">
+                            Лав-сторі студійна
+                        </span>
+                        <div class="price-card__filter filter js-filter">
+                            <div class="filter__close-button">  
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
+                           <div class="filter__city filter__row">
+                               <div class="filter__item filter__active">
+                                   <button type="" value="lutsk">Луцьк</button>
+                               </div>
+                              <div class="filter__item">
+                                   <button type="" value="rivne">Рівне</button>
+                               </div>
+                               <div class="filter__item">
+                                   <button type="" value="lviv">Лвів</button>
+                               </div> 
+                           </div> 
+                            <div class="filter__package filter__row">
+                                <div class="filter__item">
+                                   <button type="" value="mini">Mini</button>
+                               </div>
+                                 <div class="filter__item filter__active">
+                                   <button type="" value="maxi">Maxi</button>
+                               </div>
+                           </div> 
+                            <div class="filter__time filter__row filter__time--two">
+                                  <div class="filter__item filter__active">
+                                   <button type="" value="1">1 год</button>
+                                  </div>
+                                    <div class="filter__item">
+                                   <button type="" value="2">2 год</button>
+                               </div>
+                           </div>
+                        </div>
+                        <a target="_blank" href="https://t.me/anasteya_n" class="price-card__link">
+                            <div class="price-card__img">
+                                <picture>
+                                    <source type="image/webp" media="(min-width: 320px)" srcset="images/price/price-studio-love.webp">
+                                    <img src="images/price/price-studio-love.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="price-card__filter-output output js-output">
+                                <div class="output__price">
+                                </div>
+                                <div class="output__services">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="content-main__price-card-4 price-card" id="4">
+                        <span class="price-card__header">
+                            Лав-сторі вулична
+                        </span>
+                        <div class="price-card__filter filter js-filter">
+                            <div class="filter__close-button">  
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
+                           <div class="filter__city filter__row">
+                               <div class="filter__item filter__active">
+                                   <button type="" value="lutsk">Луцьк</button>
+                               </div>
+                              <div class="filter__item">
+                                   <button type="" value="rivne">Рівне</button>
+                               </div>
+                               <div class="filter__item">
+                                   <button type="" value="lviv">Лвів</button>
+                               </div> 
+                           </div> 
+                            <div class="filter__package filter__row">
+                                <div class="filter__item">
+                                   <button type="" value="mini">Mini</button>
+                               </div>
+                                 <div class="filter__item filter__active">
+                                   <button type="" value="maxi">Maxi</button>
+                               </div>
+                           </div> 
+                            <div class="filter__time filter__row">
+                                  <div class="filter__item filter__active">
+                                   <button type="" value="1.5">1.5 год</button>
+                                  </div>
+                                  <div class="filter__item">
+                                   <button type="" value="2">2 год</button>
+                                  </div>
+                                    <div class="filter__item">
+                                   <button type="" value="3">3 год</button>
+                               </div>
+                           </div>
+                        </div>
+                        <a target="_blank" href="https://t.me/anasteya_n" class="price-card__link">
+                            <div class="price-card__img">
+                                <picture>
+                                    <source type="image/webp" media="(min-width: 320px)" srcset="images/price/price-street-love.webp">
+                                    <img src="images/price/price-street-love.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="price-card__filter-output output js-output">
+                                <div class="output__price">
+                                </div>
+                                <div class="output__services">
                                 </div>
                             </div>
                         </a>
                     </div>
 
-                    <div class="content-main__price-card-2 price-card">
-
-                        <span class="price-card__header">
-                            Вулична зйомка
-                        </span>
-                        <a target="_blank" href="https://t.me/anasteya_n" class="price-card__link">
-                            <div class="price-card__img">
-                                <img src="images/price/price-nature.jpg" alt="">
-                                <span class="price-card__price">
-                                    600 грн
-                                </span>
-                            </div>
-                            <div class="price-card__description">
-                                <ul class="price-card__included">
-                                    <li>Підбір ідеї, локації, образа</li>
-                                    <li>Зйомка 1-2 години</li>
-                                    <li>Від 80 гарних фото</li>
-                                </ul>
-                                <div class="price-card__not-included">
-                                    <p>Якщо локація знаходиться за межами міста / далеко від зупинки громадського
-                                        транспорту або метро / рано вранці або пізно ввечері - замовник сплачуе трансфер
-                                        для фотографа в обидві сторони</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="content-main__price-card-3 price-card">
-                        <span class="price-card__header">
-                            Репортажна зйомка
-                        </span>
-                        <a target="_blank" href="https://t.me/anasteya_n" class="price-card__link">
-                            <div class="price-card__img">
-                                <img src="images/price/price-reportge.jpg" alt="">
-                                <span class="price-card__price">
-                                    700 грн / 400 грн
-                                </span>
-                            </div>
-                            <div class="price-card__description">
-                                <div class="price-card__list-wrap">
-                                    <div class="pice-card__list-1">
-                                        <ul class="price-card__included">
-                                            <li>Зйомка 55 хвилин</li>
-                                            <li>Від 150 гарних фото</li>
-                                        </ul>
-                                    </div>
-                                    <div class="pice-card__list-2">
-                                        <ul class="price-card__included">
-                                            <li>Зйомка 30 хвилин</li>
-                                            <li>Від 100 гарних фото</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="price-card__not-included">
-                                    <p>Якщо локація знаходиться за межами міста / далеко від зупинки громадського
-                                        транспорту або метро / рано вранці або пізно ввечері - замовник сплачуе трансфер
-                                        для фотографа в обидві сторони</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
                 </div>
             </main>
         </div>
@@ -168,6 +295,8 @@
     <!-- <script src="module_gallery/script.js"></script> -->
     <script src="https://kit.fontawesome.com/59cb385119.js" crossorigin="anonymous"></script>
     <script src="scripts/script_price.js"></script>
+    <script src="scripts/filter.js"></script>
 </body>
 
 </html>
+
