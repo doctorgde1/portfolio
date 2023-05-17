@@ -1,290 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style_price.css">
-    <link rel="stylesheet" type="" href="css/filter.css">
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style_price.css" />
+    <link rel="stylesheet" type="" href="css/filter.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="content">
-        <div class="price-card__cursor">
-        </div>
-        <div class="content-header">
-            <header>
-                <div class="content-header__navigation">
-                    <div class="content-header__column">
-                        <div class="content-header__row1">
-                            <div class="content-header__image">
-                                <img src="images/icons/logo.png" alt="">
-                            </div>
-                            <div class="content-header__contact">
-                                <div class="content-header__name">
-                                    <a href="http://" target="_blank" rel="noopener noreferrer"></a>
-                                    ANASTASIA
-                                </div>
-                                <div class="content-header__surname">
-                                    NYZOVA
-                                </div>
-                            </div>
-                        </div>
-                        <div class="content-header__row2">
-                            <div class="content-header__links">
-                                <div class="content-header__main link-button">
-                                    <a href="https://doctorgde1.github.io/portfolio/index.html"><span>ГОЛОВНА</span>
-                                    </a>
-                                </div>
-                                <div class="content-header__portfolio link-button">
-                                    <a href="https://doctorgde1.github.io/portfolio/portfolio.html"><span>ПОРТФОЛІО</span>
-                                    </a>
-                                </div>
-                                <div class="content-header__price link-button active">
-                                    <a href="https://doctorgde1.github.io/portfolio/price.html"><span>ПОСЛУГИ</span>
-                                    </a>
-                                </div>
-                                <div class="content-header__price link-button">
-                                    <a href="https://doctorgde1.github.io/portfolio/conditions.html"><span>УМОВИ ПРАЦІ</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      <div class="price-card__cursor"></div>
+      <div class="content-header">
+        <header>
+          <div class="content-header__navigation">
+            <div class="content-header__column">
+              <div class="content-header__row1">
+                <div class="content-header__image">
+                  <img src="images/icons/logo.png" alt="" />
                 </div>
-            </header>
-        </div>
-        <div class="content-main">
-            <main>
-                <div class="content-main__cards">
-                    <div class="content-main__price-card-1 price-card" id="1">
-                        <span class="price-card__header">
-                            Індивідуальна студійна
-                        </span>
-                        <div class="price-card__filter filter js-filter">
-                            <div class="filter__close-button">  
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </div>
-                           <div class="filter__city filter__row">
-                               <div class="filter__item filter__active">
-                                   <button type="" value="kharkiv">Харків</button>
-                               </div>
-                               <div class="filter__item">
-                                   <button type="" value="lutsk">Луцьк</button>
-                               </div>
-                              <div class="filter__item">
-                                   <button type="" value="kyiv">Київ</button>
-                               </div>
-                               <div class="filter__item">
-                                   <button type="" value="dnepr">Днепр</button>
-                               </div> 
-                           </div> 
-                            <div class="filter__package filter__row">
-                                <div class="filter__item">
-                                   <button type="" value="mini">Mini</button>
-                               </div>
-                                 <div class="filter__item filter__active">
-                                   <button type="" value="maxi">Maxi</button>
-                               </div>
-                           </div> 
-                            <div class="filter__time filter__row filter__time--two">
-                                  <div class="filter__item filter__active">
-                                   <button type="" value="1">1 год</button>
-                                  </div>
-                                    <div class="filter__item">
-                                   <button type="" value="2">2 год</button>
-                               </div>
-                           </div>
-                        </div>
-                        <a target="_blank" href="https://t.me/anasteya_n" class="price-card__link">
-                            <div class="price-card__img">
-                                <picture>
-                                    <source type="image/webp" media="(min-width: 320px)" srcset="images/price/price-studio.webp">
-                                    <img src="images/price/price-studio.jpg" alt="">
-                                </picture>
-                            </div>
-                            <div class="price-card__filter-output output js-output">
-                                <div class="output__price">
-                                </div>
-                                <div class="output__services">
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="content-main__price-card-2 price-card" id="2">
-                        <span class="price-card__header">
-                            Індивідуальна вулична
-                        </span>
-                        <div class="price-card__filter filter js-filter">
-                            <div class="filter__close-button">  
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </div>
-                           <div class="filter__city filter__row">
-                               <div class="filter__item filter__active">
-                                   <button type="" value="kharkiv">Харків</button>
-                               </div>
-                           </div>
-                            <div class="filter__package filter__row">
-                                 <div class="filter__item filter__active">
-                                   <button type="" value="maxi">Maxi</button>
-                               </div>
-                           </div> 
-                            <div class="filter__time filter__row">
-                                  <div class="filter__item filter__active">
-                                   <button type="" value="1.5">1.5 год</button>
-                                  </div>
-                                  <div class="filter__item">
-                                   <button type="" value="2">2 год</button>
-                                  </div>
-                                    <div class="filter__item">
-                                   <button type="" value="3">3 год</button>
-                               </div>
-                           </div>
-                        </div>
-                        <a target="_blank" href="https://t.me/anasteya_n" class="price-card__link">
-                            <div class="price-card__img">
-                                <picture>
-                                    <source type="image/webp" media="(min-width: 320px)" srcset="images/price/price-street.webp">
-                                    <img src="images/price/price-street.jpg" alt="">
-                                </picture>
-                            </div>
-                            <div class="price-card__filter-output output js-output">
-                                <div class="output__price">
-                                </div>
-                                <div class="output__services">
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="content-main__price-card-3 price-card" id="3">
-                        <span class="price-card__header">
-                            Лав-сторі студійна
-                        </span>
-                        <div class="price-card__filter filter js-filter">
-                            <div class="filter__close-button">  
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </div>
-                           <div class="filter__city filter__row">
-                               <div class="filter__item filter__active">
-                                   <button type="" value="kharkiv">Харків</button>
-                               </div>
-                               <div class="filter__item">
-                                   <button type="" value="lutsk">Луцьк</button>
-                               </div>
-                              <div class="filter__item">
-                                   <button type="" value="kyiv">Київ</button>
-                               </div>
-                               <div class="filter__item">
-                                   <button type="" value="dnepr">Днепр</button>
-                               </div> 
-                           </div>
-                            <div class="filter__package filter__row">
-                                <div class="filter__item">
-                                   <button type="" value="mini">Mini</button>
-                               </div>
-                                 <div class="filter__item filter__active">
-                                   <button type="" value="maxi">Maxi</button>
-                               </div>
-                           </div> 
-                            <div class="filter__time filter__row filter__time--two">
-                                  <div class="filter__item filter__active">
-                                   <button type="" value="1">1 год</button>
-                                  </div>
-                                    <div class="filter__item">
-                                   <button type="" value="2">2 год</button>
-                               </div>
-                           </div>
-                        </div>
-                        <a target="_blank" href="https://t.me/anasteya_n" class="price-card__link">
-                            <div class="price-card__img">
-                                <picture>
-                                    <source type="image/webp" media="(min-width: 320px)" srcset="images/price/price-studio-love.webp">
-                                    <img src="images/price/price-studio-love.jpg" alt="">
-                                </picture>
-                            </div>
-                            <div class="price-card__filter-output output js-output">
-                                <div class="output__price">
-                                </div>
-                                <div class="output__services">
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="content-main__price-card-4 price-card" id="4">
-                        <span class="price-card__header">
-                            Лав-сторі вулична
-                        </span>
-                        <div class="price-card__filter filter js-filter">
-                            <div class="filter__close-button">  
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </div>
-                           <div class="filter__city filter__row">
-                               <div class="filter__item filter__active">
-                                   <button type="" value="kharkiv">Харків</button>
-                               </div>
-                           </div>
-                            <div class="filter__package filter__row">
-                                 <div class="filter__item filter__active">
-                                   <button type="" value="maxi">Maxi</button>
-                               </div>
-                           </div> 
-                            <div class="filter__time filter__row">
-                                  <div class="filter__item filter__active">
-                                   <button type="" value="1.5">1.5 год</button>
-                                  </div>
-                                  <div class="filter__item">
-                                   <button type="" value="2">2 год</button>
-                                  </div>
-                                    <div class="filter__item">
-                                   <button type="" value="3">3 год</button>
-                               </div>
-                           </div>
-                        </div>
-                        <a target="_blank" href="https://t.me/anasteya_n" class="price-card__link">
-                            <div class="price-card__img">
-                                <picture>
-                                    <source type="image/webp" media="(min-width: 320px)" srcset="images/price/price-street-love.webp">
-                                    <img src="images/price/price-street-love.jpg" alt="">
-                                </picture>
-                            </div>
-                            <div class="price-card__filter-output output js-output">
-                                <div class="output__price">
-                                </div>
-                                <div class="output__services">
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
+                <div class="content-header__contact">
+                  <div class="content-header__name">
+                    <a
+                      href="http://"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    ></a>
+                    ANASTASIA
+                  </div>
+                  <div class="content-header__surname">NYZOVA</div>
                 </div>
-            </main>
-        </div>
-        <div class="content-footer">
-            <footer>
-                <div class="content-footer__links">
-                    <a target="blank" href="https://www.instagram.com/sinciere_ph/"
-                        class="content-footer__instagram link"><i class="fa-brands fa-instagram"></i></a>
-                    <a target="blank" href="https://t.me/anasteya_n" class="content-footer__telegram link"><i
-                            class="fa-brands fa-telegram"></i></a>
-                    <a target="blank" href="https://wa.me/+380950425117" class="content-footer__whatsapp link"><i
-                            class="fa-brands fa-whatsapp"></i></a>
-                    <a target="blank" href="mailto: mininizovay@gmail.com" class="content-footer__mail link"><i
-                            class="fa-solid fa-envelope"></i></a>
+              </div>
+              <div class="content-header__row2">
+                <div class="content-header__links">
+                  <div class="content-header__main link-button">
+                    <a href="https://doctorgde1.github.io/portfolio/index.html"
+                      ><span>ГОЛОВНА</span>
+                    </a>
+                  </div>
+                  <div class="content-header__portfolio link-button">
+                    <a
+                      href="https://doctorgde1.github.io/portfolio/portfolio.html"
+                      ><span>ПОРТФОЛІО</span>
+                    </a>
+                  </div>
+                  <div class="content-header__price link-button active">
+                    <a href="https://doctorgde1.github.io/portfolio/price.html"
+                      ><span>ПОСЛУГИ</span>
+                    </a>
+                  </div>
+                  <div class="content-header__price link-button">
+                    <a
+                      href="https://doctorgde1.github.io/portfolio/conditions.html"
+                      ><span>УМОВИ ПРАЦІ</span>
+                    </a>
+                  </div>
                 </div>
-                <div class="content-footer__description">
-                    <p>Anastasia Nyzova | 2022</p>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="content-main">
+        <h2 class="price-alert">
+          До 20.05 діють старі ціни<br /><span>-1000</span>
+        </h2>
+        <main>
+          <div class="content-main__cards">
+            <div class="content-main__price-card-1 price-card" id="1">
+              <span class="price-card__header"> Індивідуальна студійна </span>
+              <div class="price-card__filter filter js-filter">
+                <div class="filter__close-button">
+                  <i class="fa-solid fa-chevron-left"></i>
                 </div>
-            </footer>
-        </div>
+                <div class="filter__city filter__row">
+                  <div class="filter__item filter__active">
+                    <button type="" value="kharkiv">Харків</button>
+                  </div>
+                  <div class="filter__item">
+                    <button type="" value="lutsk">Луцьк</button>
+                  </div>
+                  <div class="filter__item">
+                    <button type="" value="kyiv">Київ</button>
+                  </div>
+                  <div class="filter__item">
+                    <button type="" value="dnepr">Днепр</button>
+                  </div>
+                </div>
+                <div class="filter__package filter__row">
+                  <div class="filter__item">
+                    <button type="" value="mini">Mini</button>
+                  </div>
+                  <div class="filter__item filter__active">
+                    <button type="" value="maxi">Maxi</button>
+                  </div>
+                </div>
+                <div class="filter__time filter__row filter__time--two">
+                  <div class="filter__item filter__active">
+                    <button type="" value="1">1 год</button>
+                  </div>
+                  <div class="filter__item">
+                    <button type="" value="2">2 год</button>
+                  </div>
+                </div>
+              </div>
+              <a
+                target="_blank"
+                href="https://t.me/anasteya_n"
+                class="price-card__link"
+              >
+                <div class="price-card__img">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      media="(min-width: 320px)"
+                      srcset="images/price/price-studio.webp"
+                    />
+                    <img src="images/price/price-studio.jpg" alt="" />
+                  </picture>
+                </div>
+                <div class="price-card__filter-output output js-output">
+                  <div class="output__price"></div>
+                  <div class="output__services"></div>
+                </div>
+              </a>
+            </div>
+            <div class="content-main__price-card-2 price-card" id="2">
+              <span class="price-card__header"> Індивідуальна вулична </span>
+              <div class="price-card__filter filter js-filter">
+                <div class="filter__close-button">
+                  <i class="fa-solid fa-chevron-left"></i>
+                </div>
+                <div class="filter__city filter__row">
+                  <div class="filter__item filter__active">
+                    <button type="" value="kharkiv">Харків</button>
+                  </div>
+                </div>
+                <div class="filter__package filter__row">
+                  <div class="filter__item filter__active">
+                    <button type="" value="maxi">Maxi</button>
+                  </div>
+                </div>
+                <div class="filter__time filter__row">
+                  <div class="filter__item filter__active">
+                    <button type="" value="1.5">1.5 год</button>
+                  </div>
+                  <div class="filter__item">
+                    <button type="" value="2">2 год</button>
+                  </div>
+                  <div class="filter__item">
+                    <button type="" value="3">3 год</button>
+                  </div>
+                </div>
+              </div>
+              <a
+                target="_blank"
+                href="https://t.me/anasteya_n"
+                class="price-card__link"
+              >
+                <div class="price-card__img">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      media="(min-width: 320px)"
+                      srcset="images/price/price-street.webp"
+                    />
+                    <img src="images/price/price-street.jpg" alt="" />
+                  </picture>
+                </div>
+                <div class="price-card__filter-output output js-output">
+                  <div class="output__price"></div>
+                  <div class="output__services"></div>
+                </div>
+              </a>
+            </div>
+            <div class="content-main__price-card-3 price-card" id="3">
+              <span class="price-card__header"> Лав-сторі студійна </span>
+              <div class="price-card__filter filter js-filter">
+                <div class="filter__close-button">
+                  <i class="fa-solid fa-chevron-left"></i>
+                </div>
+                <div class="filter__city filter__row">
+                  <div class="filter__item filter__active">
+                    <button type="" value="kharkiv">Харків</button>
+                  </div>
+                  <div class="filter__item">
+                    <button type="" value="lutsk">Луцьк</button>
+                  </div>
+                  <div class="filter__item">
+                    <button type="" value="kyiv">Київ</button>
+                  </div>
+                  <div class="filter__item">
+                    <button type="" value="dnepr">Днепр</button>
+                  </div>
+                </div>
+                <div class="filter__package filter__row">
+                  <div class="filter__item">
+                    <button type="" value="mini">Mini</button>
+                  </div>
+                  <div class="filter__item filter__active">
+                    <button type="" value="maxi">Maxi</button>
+                  </div>
+                </div>
+                <div class="filter__time filter__row filter__time--two">
+                  <div class="filter__item filter__active">
+                    <button type="" value="1">1 год</button>
+                  </div>
+                  <div class="filter__item">
+                    <button type="" value="2">2 год</button>
+                  </div>
+                </div>
+              </div>
+              <a
+                target="_blank"
+                href="https://t.me/anasteya_n"
+                class="price-card__link"
+              >
+                <div class="price-card__img">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      media="(min-width: 320px)"
+                      srcset="images/price/price-studio-love.webp"
+                    />
+                    <img src="images/price/price-studio-love.jpg" alt="" />
+                  </picture>
+                </div>
+                <div class="price-card__filter-output output js-output">
+                  <div class="output__price"></div>
+                  <div class="output__services"></div>
+                </div>
+              </a>
+            </div>
+            <div class="content-main__price-card-4 price-card" id="4">
+              <span class="price-card__header"> Лав-сторі вулична </span>
+              <div class="price-card__filter filter js-filter">
+                <div class="filter__close-button">
+                  <i class="fa-solid fa-chevron-left"></i>
+                </div>
+                <div class="filter__city filter__row">
+                  <div class="filter__item filter__active">
+                    <button type="" value="kharkiv">Харків</button>
+                  </div>
+                </div>
+                <div class="filter__package filter__row">
+                  <div class="filter__item filter__active">
+                    <button type="" value="maxi">Maxi</button>
+                  </div>
+                </div>
+                <div class="filter__time filter__row">
+                  <div class="filter__item filter__active">
+                    <button type="" value="1.5">1.5 год</button>
+                  </div>
+                  <div class="filter__item">
+                    <button type="" value="2">2 год</button>
+                  </div>
+                  <div class="filter__item">
+                    <button type="" value="3">3 год</button>
+                  </div>
+                </div>
+              </div>
+              <a
+                target="_blank"
+                href="https://t.me/anasteya_n"
+                class="price-card__link"
+              >
+                <div class="price-card__img">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      media="(min-width: 320px)"
+                      srcset="images/price/price-street-love.webp"
+                    />
+                    <img src="images/price/price-street-love.jpg" alt="" />
+                  </picture>
+                </div>
+                <div class="price-card__filter-output output js-output">
+                  <div class="output__price"></div>
+                  <div class="output__services"></div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </main>
+      </div>
+      <div class="content-footer">
+        <footer>
+          <div class="content-footer__links">
+            <a
+              target="blank"
+              href="https://www.instagram.com/sinciere_ph/"
+              class="content-footer__instagram link"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a
+              target="blank"
+              href="https://t.me/anasteya_n"
+              class="content-footer__telegram link"
+              ><i class="fa-brands fa-telegram"></i
+            ></a>
+            <a
+              target="blank"
+              href="https://wa.me/+380950425117"
+              class="content-footer__whatsapp link"
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a>
+            <a
+              target="blank"
+              href="mailto: mininizovay@gmail.com"
+              class="content-footer__mail link"
+              ><i class="fa-solid fa-envelope"></i
+            ></a>
+          </div>
+          <div class="content-footer__description">
+            <p>Anastasia Nyzova | 2022</p>
+          </div>
+        </footer>
+      </div>
     </div>
     <!-- <script src="module_gallery/script.js"></script> -->
-    <script src="https://kit.fontawesome.com/59cb385119.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/59cb385119.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="scripts/script_price.js"></script>
     <script src="scripts/filter.js"></script>
-</body>
-
+  </body>
 </html>
-
